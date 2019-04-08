@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-signin-client_id" content="2731257843-grg8ke9jd1214ut22tglmgvrej62pijj.apps.googleusercontent.com">
+  <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- essential -->
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <title>test</title>
+</head>
+
+<body>
+
+  <!-- header / navbar -->
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+        <li><a href="#">Home</a></li>
+        <li id="isLoggin"><a class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></a></li>
+        <li><a href="#">About</a></li>
+
+        <li id="logout"><a href="#" onclick="signOut()">logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+  <div class="logohere">
+    <h3>MHD</h3>
+  </div>
+
+  <div class="container-nav">
+    <div id="homepag">
+    <h1 id="texthere"> "train your brain with us" </h1>
+    <div id="aframe">
+      <a-scene embedded vr-mode-ui="enabled: false">
+        <a-assets>
+          <a-asset-item id="brain-obj" src="./modeling/brain/brain.obj"></a-asset-item>
+          <a-asset-item id="brain-mtl" src="./modeling/brain/brain.mtl"></a-asset-item>
+        </a-assets>
+        <a-entity position="0 1 -6" obj-model="obj: #brain-obj; mtl: #brain-mtl" animation="property: rotation; direction: normal;to: 0 360 0; loop: true; dur: 10000; easing:linear;  repeat: indefinite; fill:forwards"></a-entity>
+      </a-scene>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer">
+    <span>classic-fox</span>
+    <a href="https://github.com/harmnot" color=""><i class="fab fa-github"></i></a>
+  </div>
+
+</body>
+<script src="/js/main.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,16 @@
+<div id="homepag">
+  <h1 id="texthere"> "train your brain with us" </h1>
+  <div id="aframe">
+    <a-scene embedded vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="brain-obj" src="./modeling/brain/brain.obj" />
+        <a-asset-item id="brain-mtl" src="./modeling/brain/brain.mtl" />
+      </a-assets>
+      <a-entity
+        position="0 1 -6"
+        obj-model="obj: #brain-obj; mtl: #brain-mtl"
+        animation="property: rotation; direction: normal;to: 0 360 0; loop: true; dur: 10000; easing:linear;  repeat: indefinite; fill:forwards"
+      />
+    </a-scene>
+  </div>
+</div>;

@@ -1,0 +1,113 @@
+
+
+<a-scene embedded id="vr"'>
+
+  <a-assets>
+    <!-- sky backgroun -->
+    <img id="earth" src="./dirty.jpg" alt="">
+
+    <!-- floor -->
+    <img id="jj" src="./jj.jpg" alt="">
+
+    <!-- jupiter -->
+    <a-asset-item id="jupiter" src="./modeling/jupiter-obj/jupiter.obj"></a-asset-item>
+    <a-asset-item id="jupiters" src="./modeling/jupiter-obj/jupiter.mtl"></a-asset-item>
+
+
+    <!-- tree panjang -->
+    <a-asset-item id="low" src="./modeling/low-poly-dead-tree-obj/low-poly-dead-tree.obj"></a-asset-item>
+    <a-asset-item id="lows" src="./modeling/low-poly-dead-tree-obj/low-poly-dead-tree.mtl"></a-asset-item>
+
+    <a-asset-item id="tree" src="./modeling/palm-tree-obj/palm-tree.obj"></a-asset-item>
+    <a-asset-item id="trees" src="./modeling/palm-tree-obj/palm-tree.mtl"></a-asset-item>
+
+    <!-- bb -->
+    <a-asset-item id="bb-obj" src="./modeling/bb-unit-obj/bb-unit.obj"></a-asset-item>
+    <a-asset-item id="bb-mtl" src="./modeling/bb-unit-obj/bb-unit.mtl"> </a-asset-item>
+
+    <!-- another tree -->
+    <a-asset-item id="tree-obj" src="./modeling/attempt-of-making-a-tree-obj/attempt-of-making-a-tree.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="./modeling/attempt-of-making-a-tree-obj/attempt-of-making-a-tree.mtl"> </a-asset-item>
+
+  </a-assets>
+
+  <!-- latar -->
+  <a-sky src="#jj" rotation="0 65 0"> </a-sky>
+
+  <!-- earth -->
+  <a-plane material="color: #FFFFFF; src:#earth; repeat: 5000 5000" rotation="-90 0 0" scale="10000 10000 1">
+
+  </a-plane>
+
+  <!-- things -->
+  <a-sphere position="-2 8 -20" color="#689F38" radius="1" animation="property: rotation; to: 0 360 1; loop: true; dur: 2000; easing:linear">
+    <a-box position="-2 0.5 -2" color="rgb(218, 173, 39)" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+    <a-box position="2 0.5 -2" color="#2a9e9e" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+    <a-box position="3 0.5 2" color="#a779a4" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+    <a-box position="-1 0.5 3" color="#63283a" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+
+  </a-sphere>
+
+  <a-sphere position="-20 17 -10" color="#689F38" radius="1" animation="property: rotation; to: 0 360 1; loop: true; dur: 2000; easing:linear">
+    <a-box position="-2 0.5 -2" color="rgb(233, 145, 27)" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+    <a-box position="2 0.5 -2" color="rgb(233, 145, 27)" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+    <a-box position="3 0.5 2" color="#a779a4" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+    <a-box position="-1 0.5 3" color="#63283a" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+    </a-box>
+
+  </a-sphere>
+
+  <a-sphere position="37 30 -10" color="#562a9e" radius="1" animation="property: rotation; to: 0 360 1; loop: true; dur: 2000; easing:linear">
+    <a-box position="-2 0.5 -2" color="rgb(102, 94, 73)" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-box>
+    <a-box position="2 0.5 -2" color="rgb(102, 94, 73)" animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">
+    </a-box>
+    <a-box position="3 0.5 2" color="rgb(102, 94, 73)" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-box>
+    <a-box position="-1 0.5 3" color="rgb(102, 94, 73)" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-box>
+
+  </a-sphere>
+
+  <!-- modeling -->
+  <a-obj-model position="-10 0.1 4" src="#tree" mtl="#trees"></a-obj-model>
+  <a-obj-model position="-20 0.1 4" src="#low" mtl="#lows"></a-obj-model>
+  <a-obj-model position="20 0.1 40" src="#low" mtl="#lows"></a-obj-model>
+  <a-obj-model position="-30 0.1 30" src="#low" mtl="#lows"></a-obj-model>
+  <a-obj-model position="-40 0.1 10" src="#low" mtl="#lows"></a-obj-model>
+  <a-entity position="100 70 40" obj-model="obj: #jupiter; mtl: #jupiters" animation="property: rotation; direction: normal;to: 0 360 0; loop: true; dur: 10000; easing:linear;  repeat: indefinite; fill:forwards"></a-entity>
+  <a-obj-model position="30 0.1 30" src="#tree" mtl="#trees"></a-obj-model>
+  <a-obj-model position="33 0.1 40" src="#tree" mtl="#trees"></a-obj-model>
+  <a-entity position="-20 0.7 -20" obj-model="obj: #bb-obj; mtl: #bb-mtl" scale="0.01 0.01 0.01" animation="property: position; from: -22 0.8 -22; to: -22 0.8 22; loop: true; dir: alternate; easing:linear;dur:10000"></a-entity>
+  <a-entity position="-23 0.7 -30" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+  <a-entity position="26 0.7 -40" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+  <a-obj-model position="-54 0.7 -36" src="#tree" mtl="#trees"></a-obj-model>
+  <a-obj-model position="15 0.7 -40" src="#low" mtl="#lows"></a-obj-model>
+  <a-obj-model position="10 0.7 -97" src="#low" mtl="#lows"></a-obj-model>
+
+  <a-cone position="-214 1 -30" scale="2 2 3" height="14"></a-cone>
+  <a-cone position="-289 1 -60" scale="2 2 3" height="8"></a-cone>
+  <a-cone position="220 1 23" scale="2 2 3" height="3"></a-cone>
+</a-scene>
+
+<br />
+<h1 id="explore"> exploring our planet and remember what you see, if you ready please click button below</h1>
+<button onclick="myFunction()" id="klik" class="btn btn-secondary"> Train your brain </button>
+<div id="quiz" class="container">
+
+</div><br /> <br />
+<button id="submit" display="none">Get Results</button>
+<div id="results"></div>
+
+
+
+
+
+
